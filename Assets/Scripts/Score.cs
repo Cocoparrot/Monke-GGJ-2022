@@ -6,6 +6,8 @@ public class Score : MonoBehaviour
 {
     public int score;
     public int multiplier;
+    public int monkeyMeter;
+    public int monkeyMeterMax;
 
     public float multiplierDuration;
 
@@ -15,9 +17,16 @@ public class Score : MonoBehaviour
         multiplier = 1;
     }
 
-    public void addScore(int added)
+    public void addScore(int added, bool multiply)
     {
-        score += (added * multiplier);
+        if (multiply == true)
+        {
+            score += (added * multiplier);
+        }
+        else
+        {
+            score += added;
+        }
     }
 
     public void addMultiplier(int added)
@@ -30,5 +39,14 @@ public class Score : MonoBehaviour
     {
         yield return new WaitForSeconds(waitTime);
         multiplier = 1;
+    }
+
+    void MonkeyMeter()
+    {
+        if (monkeyMeter == monkeyMeterMax)
+        {
+            addScore(400, false);
+            addMultiplier(1);
+        }
     }
 }

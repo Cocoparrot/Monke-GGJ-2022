@@ -15,7 +15,7 @@ public class Banana : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            scoreSCR.addMultiplier(1);
+            scoreSCR.monkeyMeter = scoreSCR.monkeyMeterMax;
             Destroy(this.gameObject);
         }
     }
