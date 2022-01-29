@@ -462,6 +462,36 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5324807119351219336, guid: 62119b0912a35704bbf2948e8e833338, type: 3}
   m_PrefabInstance: {fileID: 5324807118317519139}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1588528556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588528555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 986216837
+      Data2: 1112556574
+      Data3: -1496923766
+      Data4: 1656957147
+    Path: event:/Music/Gameplay Music
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1866386894
 GameObject:
   m_ObjectHideFlags: 0
@@ -721,6 +751,10 @@ PrefabInstance:
       propertyPath: melee
       value: 
       objectReference: {fileID: 1928688666}
+    - target: {fileID: 5324807119351219345, guid: 62119b0912a35704bbf2948e8e833338, type: 3}
+      propertyPath: emitter
+      value: 
+      objectReference: {fileID: 1588528556}
     - target: {fileID: 5324807119351219346, guid: 62119b0912a35704bbf2948e8e833338, type: 3}
       propertyPath: m_RootOrder
       value: 3
