@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2782041789925710331}
   - component: {fileID: 107869845059579185}
   - component: {fileID: 6387418115554376244}
+  - component: {fileID: 5933325407684508322}
   m_Layer: 0
   m_Name: table
   m_TagString: Untagged
@@ -95,3 +96,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   brokenModel: {fileID: 6735105243202632426, guid: a823711d57eb33b45ad0eda45fe512a1, type: 3}
+--- !u!65 &5933325407684508322
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909464107827793124}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 4.1003256, z: 1.4886786}
+  m_Center: {x: 0, y: 0, z: -0.6468137}
