@@ -59,7 +59,7 @@ public class Movement : MonoBehaviour
 
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized;
 
-        if (move.magnitude >= 0.1f)
+        if (move.magnitude >= 0.1f && playerVelocity.y >= 0f)
         {
             float targetAngle = Mathf.Atan2(move.x, move.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
 
