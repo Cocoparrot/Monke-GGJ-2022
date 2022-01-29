@@ -59,7 +59,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5324807118965639532}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6169059205200578651}
@@ -92,7 +92,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 7557ef7778feee24b99bbea0844bcde3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -140,6 +140,7 @@ GameObject:
   - component: {fileID: 5324807119351219345}
   - component: {fileID: 5324807119351219343}
   - component: {fileID: 5324807119351219341}
+  - component: {fileID: 8254117838028135969}
   m_Layer: 0
   m_Name: Monkey
   m_TagString: Untagged
@@ -155,7 +156,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5324807119351219336}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6169059205200578651}
@@ -174,8 +175,8 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
+  m_Height: 110
+  m_Radius: 50
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
@@ -198,12 +199,15 @@ MonoBehaviour:
   playerSpeed: 2
   jumpHeight: 1
   cam: {fileID: 0}
+  emitter: {fileID: 8254117838028135969}
   human: {fileID: 11400000, guid: a4dfff8df91f9674597348fc1615936f, type: 2}
   monkey: {fileID: 11400000, guid: 62a24a225082fed4890ab10e7a9f605c, type: 2}
   form: {fileID: 11400000, guid: 62a24a225082fed4890ab10e7a9f605c, type: 2}
   humanGFX: {fileID: 5324807119570051175}
   monkeyGFX: {fileID: 5324807118965639532}
-  melee: {fileID: 0}
+  talking: 0
+  talker: {fileID: 0}
+  melee: {fileID: 2905715659606788711}
 --- !u!114 &5324807119351219343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,7 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 108d4957419d1204d9e08eedf8333b0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSCR: {fileID: 0}
+  movementSCR: {fileID: 5324807119351219345}
 --- !u!65 &5324807119351219341
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -228,8 +232,38 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 2, z: 1}
+  m_Size: {x: 75, y: 110, z: 75}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8254117838028135969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5324807119351219336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 986216837
+      Data2: 1112556574
+      Data3: -1496923766
+      Data4: 1656957147
+    Path: event:/Music/Gameplay Music
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &5324807119570051175
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,7 +405,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitbox: {fileID: 3530443662449479529}
-  active: 0
   swingTime: 0
 --- !u!65 &3530443662449479529
 BoxCollider:
@@ -384,5 +417,5 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 100, y: 100, z: 75}
+  m_Center: {x: 0, y: 0, z: 75}
