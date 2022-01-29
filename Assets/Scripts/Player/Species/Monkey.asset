@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Monkey
   m_EditorClassIdentifier: 
   speciesName: Monkey
-  speed: 10
+  speed: 300
   jumpSpeed: 3
   swingTime: 0.5
