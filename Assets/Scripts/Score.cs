@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Score : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class Score : MonoBehaviour
     public int monkeyMeterMax;
 
     public float multiplierDuration;
+
+    public TextMeshProUGUI scoreText;
 
     void Start()
     {
@@ -36,11 +39,13 @@ public class Score : MonoBehaviour
         {
             score += added;
         }
+        scoreText.SetText("X{1} Score: {0}", score, multiplier);
     }
 
     public void addMultiplier(int added)
     {
         multiplier += added;
+        scoreText.SetText("X{1} Score: {0}", score, multiplier);
         StartCoroutine(MultiplierDuration(multiplierDuration));
     }
 
