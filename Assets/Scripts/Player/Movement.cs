@@ -30,6 +30,7 @@ public class Movement : MonoBehaviour
         playerSpeed = form.speed;
         jumpHeight = form.jumpSpeed;
         melee.swingTime = form.swingTime;
+        cam = Camera.main.transform;
         if (form.speciesName == "Monkey")
         {
             emitter.SetParameter("Monkey Mode", 0);
@@ -39,6 +40,7 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(groundedPlayer);
         if (talking == true)
         {
             Talking();
