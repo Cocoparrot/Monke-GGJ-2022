@@ -9,4 +9,6 @@ public class Species : ScriptableObject
 
     public float speed;
     public float jumpSpeed;
+
+    public float swingTime;
 }

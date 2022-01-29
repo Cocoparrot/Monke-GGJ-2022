@@ -18,10 +18,13 @@ public class Movement : MonoBehaviour
     public GameObject humanGFX;
     public GameObject monkeyGFX;
 
+    public Melee melee;
+
     private void Start()
     {
         playerSpeed = form.speed;
         jumpHeight = form.jumpSpeed;
+        melee.swingTime = form.swingTime;
     }
 
     // Update is called once per frame
@@ -76,6 +79,7 @@ public class Movement : MonoBehaviour
 
             playerSpeed = form.speed;
             jumpHeight = form.jumpSpeed;
+            melee.swingTime = form.swingTime;
         }
     }
 }
