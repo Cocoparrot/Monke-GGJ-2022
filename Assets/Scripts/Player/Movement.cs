@@ -30,6 +30,10 @@ public class Movement : MonoBehaviour
         playerSpeed = form.speed;
         jumpHeight = form.jumpSpeed;
         melee.swingTime = form.swingTime;
+        if (form.speciesName == "Monkey")
+        {
+            emitter.SetParameter("Monkey Mode", 51);
+        }
     }
 
     // Update is called once per frame
