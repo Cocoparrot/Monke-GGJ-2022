@@ -72,7 +72,7 @@ public class Movement : MonoBehaviour
                 form = human;
                 monkeyGFX.SetActive(false);
                 humanGFX.SetActive(true);
-                emitter.SetParameter("Monkey Mode", 1);
+                emitter.SetParameter("Monkey Mode", 0);
             }
             else
             {
