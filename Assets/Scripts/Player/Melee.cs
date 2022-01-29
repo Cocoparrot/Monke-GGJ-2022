@@ -5,12 +5,15 @@ using UnityEngine;
 public class Melee : MonoBehaviour
 {
     public Collider hitbox;
-    public bool active;
     public float swingTime;
+
+    private bool activeMelee;
+    private bool activeInteract;
 
     void Start()
     {
-        active = false;
+        activeMelee = false;
+        activeInteract = false;
     }
 
     void Update()
@@ -19,21 +22,39 @@ public class Melee : MonoBehaviour
         {
             StartCoroutine(SwingTime(swingTime));
         }
+
+        if (Input.GetButtonDown("Interact"))
+        {
+            StartCoroutine(InteractTime(swingTime));
+        }
     }
 
     void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.GetComponent<Destructible>() && active == true)
+        if (other.gameObject.GetComponent<Destructible>() && activeMelee == true)
         {
             Debug.Log("Smack");
-            //other.GetComponent<Destructible>().Destruction();
+            other.GetComponent<Destructible>().Destruction();
+        }
+
+        if (other.gameObject.GetComponent<Interactable>() && activeInteract == true)
+        {
+            Debug.Log("Interact");
+            other.GetComponent<Interactable>().Interaction();
         }
     }
 
     IEnumerator SwingTime(float waitTime)
     {
-        active = true;
+        activeMelee = true;
         yield return new WaitForSeconds(waitTime);
-        active = false;
+        activeMelee = false;
+    }
+
+    IEnumerator InteractTime(float waitTime)
+    {
+        activeInteract = true;
+        yield return new WaitForSeconds(waitTime);
+        activeInteract = false;
     }
 }
