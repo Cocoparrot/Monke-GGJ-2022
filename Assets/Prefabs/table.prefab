@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   brokenModel: {fileID: 6735105243202632426, guid: a823711d57eb33b45ad0eda45fe512a1, type: 3}
-  score: 0
+  score: 10
 --- !u!65 &5933325407684508322
 BoxCollider:
   m_ObjectHideFlags: 0

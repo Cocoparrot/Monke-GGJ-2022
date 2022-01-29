@@ -40,7 +40,6 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(groundedPlayer);
         if (talking == true)
         {
             Talking();
@@ -61,7 +60,7 @@ public class Movement : MonoBehaviour
 
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized;
 
-        if (move.magnitude >= 0.1f && playerVelocity.y >= 0f)
+        if (move.magnitude >= 0.1f && playerVelocity.y <= 0f)
         {
             float targetAngle = Mathf.Atan2(move.x, move.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
 
