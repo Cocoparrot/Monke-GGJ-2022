@@ -157,6 +157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   brokenModel: {fileID: 0}
+  score: 10
 --- !u!65 &539498313
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -354,6 +355,7 @@ GameObject:
   - component: {fileID: 910301841}
   - component: {fileID: 910301840}
   - component: {fileID: 910301843}
+  - component: {fileID: 910301844}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -440,6 +442,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1588528555}
   sensitivity: 5
+--- !u!114 &910301844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910301839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d768818087f25804cb2d9477387aeef6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 0
+  multiplier: 0
+  multiplierDuration: 0
 --- !u!1 &1588528555 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5324807119351219336, guid: 62119b0912a35704bbf2948e8e833338, type: 3}

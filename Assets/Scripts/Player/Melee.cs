@@ -26,7 +26,7 @@ public class Melee : MonoBehaviour
         if (other.gameObject.GetComponent<Destructible>() && active == true)
         {
             Debug.Log("Smack");
-            //other.GetComponent<Destructible>().Destruction();
+            other.GetComponent<Destructible>().Destruction();
         }
     }
 
