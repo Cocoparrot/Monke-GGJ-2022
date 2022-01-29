@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class Movement : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Movement : MonoBehaviour
     public float jumpHeight = 1.0f;
     private float gravityValue = -9.81f;
     public Transform cam;
+    public StudioEventEmitter emitter;
 
     public Species human;
     public Species monkey;
@@ -63,18 +65,21 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetButtonDown("Swap"))
         {
+            
             Debug.Log("Swap");
             if (form.speciesName == "Monkey")
             {
                 form = human;
                 monkeyGFX.SetActive(false);
                 humanGFX.SetActive(true);
+                emitter.SetParameter("Monkey Mode", 0);
             }
             else
             {
                 form = monkey;
                 monkeyGFX.SetActive(true);
                 humanGFX.SetActive(false);
+                emitter.SetParameter("Monkey Mode", 51);
             }
 
             playerSpeed = form.speed;
