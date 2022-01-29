@@ -20,6 +20,9 @@ public class Movement : MonoBehaviour
     public GameObject humanGFX;
     public GameObject monkeyGFX;
 
+    public bool talking;
+    public Interactable talker;
+
     public Melee melee;
 
     private void Start()
@@ -27,16 +30,27 @@ public class Movement : MonoBehaviour
         playerSpeed = form.speed;
         jumpHeight = form.jumpSpeed;
         melee.swingTime = form.swingTime;
+        if (form.speciesName == "Monkey")
+        {
+            emitter.SetParameter("Monkey Mode", 0);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        movement();
-        formSwap();
+        if (talking == true)
+        {
+            Talking();
+        }
+        else
+        {
+            Moving();
+            FormSwap();
+        }
     }
 
-    void movement()
+    void Moving()
     {
         if (groundedPlayer && playerVelocity.y < 0)
         {
@@ -61,7 +75,7 @@ public class Movement : MonoBehaviour
         controller.Move(playerVelocity * Time.deltaTime);
     }
 
-    void formSwap()
+    void FormSwap()
     {
         if (Input.GetButtonDown("Swap"))
         {
@@ -72,19 +86,71 @@ public class Movement : MonoBehaviour
                 form = human;
                 monkeyGFX.SetActive(false);
                 humanGFX.SetActive(true);
-                emitter.SetParameter("Monkey Mode", 0);
+                emitter.SetParameter("Monkey Mode", 51);
             }
             else
             {
                 form = monkey;
                 monkeyGFX.SetActive(true);
                 humanGFX.SetActive(false);
-                emitter.SetParameter("Monkey Mode", 51);
+                emitter.SetParameter("Monkey Mode", 0);
             }
 
             playerSpeed = form.speed;
             jumpHeight = form.jumpSpeed;
             melee.swingTime = form.swingTime;
+        }
+    }
+
+    void Talking()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            if (talker.emotion[talker.emotionCount] == 1)
+            {
+                talker.successCount += 1;
+            }
+            else
+            {
+                talker.talkFail();
+            }
+            talker.emotionCount += 1;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            if (talker.emotion[talker.emotionCount] == 2)
+            {
+                talker.successCount += 1;
+            }
+            else
+            {
+                talker.talkFail();
+            }
+            talker.emotionCount += 1;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            if (talker.emotion[talker.emotionCount] == 3)
+            {
+                talker.successCount += 1;
+            }
+            else
+            {
+                talker.talkFail();
+            }
+            talker.emotionCount += 1;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            if (talker.emotion[talker.emotionCount] == 4)
+            {
+                talker.successCount += 1;
+            }
+            else
+            {
+                talker.talkFail();
+            }
+            talker.emotionCount += 1;
         }
     }
 }

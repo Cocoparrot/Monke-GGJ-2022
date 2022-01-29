@@ -15,7 +15,7 @@ public class Destructible : MonoBehaviour
 
     public void Destruction()
     {
-        scoreSCR.addScore(score);
+        scoreSCR.addScore(score, true);
         //Instantiate(brokenModel, transform.position, Quaternion.identity);
         Destroy(this.gameObject);
     }
