@@ -12,10 +12,27 @@ public class CameraControl : MonoBehaviour
     void Start()
     {
         offset = target.transform.position - transform.position;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
     void Update()
+    {
+        if(Cursor.lockState == CursorLockMode.Locked)
+        {
+            CameraMovement();
+        }
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+    }
+
+    void CameraMovement()
     {
         float horizontal = Input.GetAxis("Mouse X") * sensitivity;
         target.transform.Rotate(0, horizontal, 0);

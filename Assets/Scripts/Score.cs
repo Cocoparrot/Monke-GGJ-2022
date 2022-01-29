@@ -17,11 +17,20 @@ public class Score : MonoBehaviour
         multiplier = 1;
     }
 
+    void Update()
+    {
+        if(monkeyMeter == monkeyMeterMax)
+        {
+            MonkeyMeter();
+        }
+    }
+
     public void addScore(int added, bool multiply)
     {
         if (multiply == true)
         {
             score += (added * multiplier);
+
         }
         else
         {
@@ -41,12 +50,10 @@ public class Score : MonoBehaviour
         multiplier = 1;
     }
 
-    void MonkeyMeter()
+    public void MonkeyMeter()
     {
-        if (monkeyMeter == monkeyMeterMax)
-        {
-            addScore(400, false);
-            addMultiplier(1);
-        }
+        addScore(400, false);
+        addMultiplier(1);
+        monkeyMeter = 0;
     }
 }
