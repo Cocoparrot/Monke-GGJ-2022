@@ -456,6 +456,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   multiplier: 0
+  monkeyMeter: 0
+  monkeyMeterMax: 0
   multiplierDuration: 100
 --- !u!1 &1588528555 stripped
 GameObject:
@@ -483,8 +485,8 @@ MonoBehaviour:
       Data4: 1656957147
     Path: event:/Music/Gameplay Music
   Event: 
-  PlayEvent: 0
-  StopEvent: 0
+  PlayEvent: 1
+  StopEvent: 2
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
