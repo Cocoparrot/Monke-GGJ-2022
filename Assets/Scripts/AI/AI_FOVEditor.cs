@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-[CustomEditor (typeof (AI_Vision))]
+[CustomEditor(typeof(AI_Vision))]
 public class AI_FOVEditor : Editor
 {
     private void OnSceneGUI()

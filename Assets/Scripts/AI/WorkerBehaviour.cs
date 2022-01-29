@@ -8,7 +8,10 @@ public class WorkerBehaviour : MonoBehaviour
 
     private Patrol patrol;
     private Transform[] targets;
+    public Transform monkeyTarget;
     private GameObject lastSeen;
+
+    private AI_Vision fov;
     
 
     public enum WorkerState
@@ -21,6 +24,7 @@ public class WorkerBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        fov = gameObject.GetComponent<AI_Vision>();
         targets = patrol.targets;
     }
 
@@ -29,15 +33,21 @@ public class WorkerBehaviour : MonoBehaviour
     {
         switch (currentState)
         {
+            default:
             case WorkerState.Unaware:
                 patrol.targets = targets;
                 break;
             case WorkerState.Chase:
-                for(int i = 0; i < patrol.targets.Length; i++)
+                for (int i = 0; i < patrol.targets.Length; i++)
                 {
                     patrol.targets[i] = null;
                 }
-                //patrol.targets = lastSeen.transform;
+
+                patrol.targets[0] = monkeyTarget;
+                if (fov.visibleTargets[0] != null)
+                {
+                    monkeyTarget.position = fov.visibleTargets[0].position;
+                }
                 break;
                 //Distracted makes it so the worker waits for 5 seconds on the waypoint of the distraction?
             case WorkerState.Distracted:

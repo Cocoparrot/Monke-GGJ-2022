@@ -5,7 +5,7 @@ using UnityEngine;
 public class AI_Vision : MonoBehaviour
 {
     public float viewRadius;
-    [Range(0,360)]
+    [Range(0, 360)]
     public float viewAngle;
 
     public LayerMask targetMask;
@@ -19,7 +19,8 @@ public class AI_Vision : MonoBehaviour
         StartCoroutine("FindTargetWithDelay", .2f);
     }
 
-    IEnumerator FindTargetWithDelay(float delay) {
+    IEnumerator FindTargetWithDelay(float delay)
+    {
         while (true)
         {
             yield return new WaitForSeconds(delay);
@@ -36,11 +37,11 @@ public class AI_Vision : MonoBehaviour
         {
             Transform target = targetsInViewRadius[i].transform;
             Vector3 dirToTarget = (target.position - transform.position).normalized;
-            if(Vector3.Angle(transform.forward, dirToTarget) < viewAngle / 2)
+            if (Vector3.Angle(transform.forward, dirToTarget) < viewAngle / 2)
             {
                 float disToTarget = Vector3.Distance(transform.position, target.position);
 
-                if(!Physics.Raycast(transform.position, dirToTarget, disToTarget, obstacleMask))
+                if (!Physics.Raycast(transform.position, dirToTarget, disToTarget, obstacleMask))
                 {
                     visibleTargets.Add(target);
                 }
