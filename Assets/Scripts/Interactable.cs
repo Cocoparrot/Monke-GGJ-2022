@@ -13,10 +13,12 @@ public class Interactable : MonoBehaviour
     public int successCount;
 
     private Movement movementSCR;
+    private Manager gameManager;
 
     private void Start()
     {
         movementSCR = GameObject.FindGameObjectWithTag("Player").GetComponent<Movement>();
+        gameManager = Camera.main.GetComponent<Manager>();
     }
 
     private void Update()
@@ -28,6 +30,7 @@ public class Interactable : MonoBehaviour
         if(successCount >= emotion.Length)
         {
             Debug.Log("Successfily talked");
+            gameManager.objectivesCompleted += 1;
             successCount = 0;
         }
     }
@@ -51,6 +54,8 @@ public class Interactable : MonoBehaviour
             else
             {
                 Debug.Log("Objective Complete");
+                gameManager.objectivesCompleted += 1;
+                
             }
         }
         else
