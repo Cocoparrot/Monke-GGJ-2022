@@ -37,7 +37,7 @@ public class WorkerBehaviour : MonoBehaviour
                 {
                     patrol.targets[i] = null;
                 }
-                patrol.targets = lastSeen.transform;
+                //patrol.targets = lastSeen.transform;
                 break;
                 //Distracted makes it so the worker waits for 5 seconds on the waypoint of the distraction?
             case WorkerState.Distracted:
