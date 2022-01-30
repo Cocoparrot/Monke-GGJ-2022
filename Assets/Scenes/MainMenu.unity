@@ -508,7 +508,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f56768c61d40fdd459a80bbda0f0b9c9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 16afa7bec7067da48a54f1dc7f5f0296, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -598,20 +598,20 @@ MonoBehaviour:
 
     Transform - Right click
 
-    
 
 
-    
 
-    Movement
-    - WASD
+
+
+    Movement -
+    WASD
 
     Camera control - Mouse
 
     Transform - Right click
 
-    Select
-    dialogue option - 1, 2, 3, 4
+    Select dialogue
+    option - 1, 2, 3, 4
 
 '
   m_isRightToLeft: 0
@@ -939,7 +939,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f56768c61d40fdd459a80bbda0f0b9c9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 16afa7bec7067da48a54f1dc7f5f0296, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1147,7 +1147,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f56768c61d40fdd459a80bbda0f0b9c9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 16afa7bec7067da48a54f1dc7f5f0296, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1505,20 +1505,20 @@ MonoBehaviour:
 
     Transform - Y
 
-    
 
 
-    
 
-    Movement
-    - Left stick
+
+
+    Movement -
+    Left stick
 
     Camera control - Right stick
 
     Transform - Y
 
-    Select
-    dialogue option - D-pad'
+    Select dialogue
+    option - D-pad'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c894a75af8a03384da98e6c554f0e318, type: 2}
   m_sharedMaterial: {fileID: -2578248476303426811, guid: c894a75af8a03384da98e6c554f0e318, type: 2}
