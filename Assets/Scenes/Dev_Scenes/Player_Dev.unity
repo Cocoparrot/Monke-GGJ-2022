@@ -875,6 +875,26 @@ PrefabInstance:
       propertyPath: emitter
       value: 
       objectReference: {fileID: 1588528556}
+    - target: {fileID: 5324807119351219345, guid: 62119b0912a35704bbf2948e8e833338, type: 3}
+      propertyPath: morph.Path
+      value: event:/Monkey/Morph
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324807119351219345, guid: 62119b0912a35704bbf2948e8e833338, type: 3}
+      propertyPath: morph.Guid.Data1
+      value: -2037701325
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324807119351219345, guid: 62119b0912a35704bbf2948e8e833338, type: 3}
+      propertyPath: morph.Guid.Data2
+      value: 1281514077
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324807119351219345, guid: 62119b0912a35704bbf2948e8e833338, type: 3}
+      propertyPath: morph.Guid.Data3
+      value: 890925187
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324807119351219345, guid: 62119b0912a35704bbf2948e8e833338, type: 3}
+      propertyPath: morph.Guid.Data4
+      value: 496921429
+      objectReference: {fileID: 0}
     - target: {fileID: 5324807119351219346, guid: 62119b0912a35704bbf2948e8e833338, type: 3}
       propertyPath: m_RootOrder
       value: 3

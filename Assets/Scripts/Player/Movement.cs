@@ -13,6 +13,8 @@ public class Movement : MonoBehaviour
     private float gravityValue = -9.81f;
     public Transform cam;
     public StudioEventEmitter emitter;
+    public EventReference morph;
+    public EventReference jump;
 
     public Species human;
     public Species monkey;
@@ -71,6 +73,7 @@ public class Movement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && groundedPlayer)
         {
             playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
+            RuntimeManager.PlayOneShot(jump);
         }
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
@@ -80,7 +83,7 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetButtonDown("Swap"))
         {
-            
+            RuntimeManager.PlayOneShot(morph);
             Debug.Log("Swap");
             if (form.speciesName == "Monkey")
             {
