@@ -105,6 +105,20 @@ MonoBehaviour:
   jumpHeight: 1
   cam: {fileID: 0}
   emitter: {fileID: 8254117838028135969}
+  morph:
+    Guid:
+      Data1: -2037701325
+      Data2: 1281514077
+      Data3: 890925187
+      Data4: 496921429
+    Path: event:/Monkey/Morph
+  jump:
+    Guid:
+      Data1: 1917094369
+      Data2: 1086332289
+      Data3: 2141577884
+      Data4: 1784774705
+    Path: event:/Monkey/Vox/Positive
   human: {fileID: 11400000, guid: a4dfff8df91f9674597348fc1615936f, type: 2}
   monkey: {fileID: 11400000, guid: 62a24a225082fed4890ab10e7a9f605c, type: 2}
   form: {fileID: 11400000, guid: 62a24a225082fed4890ab10e7a9f605c, type: 2}
@@ -257,6 +271,13 @@ MonoBehaviour:
   hitbox: {fileID: 3530443662449479529}
   swingTime: 0.1
   animator: {fileID: 5344661344585757310}
+  meleeVox:
+    Guid:
+      Data1: -1323485849
+      Data2: 1337090166
+      Data3: -110736966
+      Data4: 1014726490
+    Path: event:/Monkey/Vox/Angry
 --- !u!65 &3530443662449479529
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -299,7 +320,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 933da8a4c61a62243ba0d0ba89d4652a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 933da8a4c61a62243ba0d0ba89d4652a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -374,7 +395,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f5908f127ef4d1f45a9941f8488a2536, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f5908f127ef4d1f45a9941f8488a2536, type: 3}
       propertyPath: m_LocalPosition.z

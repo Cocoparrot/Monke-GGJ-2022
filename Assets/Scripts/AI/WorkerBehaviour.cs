@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
+using FMODUnity;
 
 public class WorkerBehaviour : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class WorkerBehaviour : MonoBehaviour
     private Movement movementSCR;
 
     public Animator animator;
+
+    public EventReference spottedVox;
 
     public enum WorkerState
     {
@@ -57,6 +60,7 @@ public class WorkerBehaviour : MonoBehaviour
                 }
                 if (fov.visibleTargets[0] != null && movementSCR.form.speciesName == "Monkey")
                 {
+                    RuntimeManager.PlayOneShot(spottedVox);
                     currentState = WorkerState.Chase;
                 }
                 break;
@@ -77,7 +81,7 @@ public class WorkerBehaviour : MonoBehaviour
                     monkeyTarget.position = fov.visibleTargets[0].position;
                 }
                 float dist = Vector3.Distance(monkeyTarget.position, this.transform.position);
-                if (fov.visibleTargets.Count == 0)
+                if (fov.visibleTargets.Count == 0 && dist <= 1.0f)
                 {
                     patrol.targets = new Transform[1];
                     currentState = WorkerState.Unaware;

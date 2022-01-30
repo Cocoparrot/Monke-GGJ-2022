@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class Melee : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class Melee : MonoBehaviour
 
     public Animator animator;
 
+    public EventReference meleeVox;
+
     void Start()
     {
         activeMelee = false;
@@ -22,6 +25,7 @@ public class Melee : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
+            RuntimeManager.PlayOneShot(meleeVox);
             animator.SetTrigger("MAttack");
             StartCoroutine(SwingTime(swingTime));
         }
