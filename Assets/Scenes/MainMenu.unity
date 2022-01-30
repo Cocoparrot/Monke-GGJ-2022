@@ -554,11 +554,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: -932493489
-      Data2: 1272851978
-      Data3: 1802469021
-      Data4: 479201594
-    Path: event:/Interaction/Break Metal
+      Data1: 213891144
+      Data2: 1278282503
+      Data3: 186318776
+      Data4: -19924915
+    Path: event:/UI/Menu Buttons
   Event: 
   PlayEvent: 11
   StopEvent: 2
@@ -566,9 +566,9 @@ MonoBehaviour:
   TriggerOnce: 0
   Preload: 0
   Params: []
-  OverrideAttenuation: 1
+  OverrideAttenuation: 0
   OverrideMinDistance: 1
-  OverrideMaxDistance: 1000
+  OverrideMaxDistance: 20
 --- !u!1 &185088759
 GameObject:
   m_ObjectHideFlags: 0
@@ -1028,11 +1028,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: -932493489
-      Data2: 1272851978
-      Data3: 1802469021
-      Data4: 479201594
-    Path: event:/Interaction/Break Metal
+      Data1: 213891144
+      Data2: 1278282503
+      Data3: 186318776
+      Data4: -19924915
+    Path: event:/UI/Menu Buttons
   Event: 
   PlayEvent: 11
   StopEvent: 2
@@ -1279,11 +1279,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: -932493489
-      Data2: 1272851978
-      Data3: 1802469021
-      Data4: 479201594
-    Path: event:/Interaction/Break Metal
+      Data1: 213891144
+      Data2: 1278282503
+      Data3: 186318776
+      Data4: -19924915
+    Path: event:/UI/Menu Buttons
   Event: 
   PlayEvent: 11
   StopEvent: 2
@@ -1291,9 +1291,9 @@ MonoBehaviour:
   TriggerOnce: 0
   Preload: 0
   Params: []
-  OverrideAttenuation: 1
+  OverrideAttenuation: 0
   OverrideMinDistance: 1
-  OverrideMaxDistance: 1000
+  OverrideMaxDistance: 20
 --- !u!1 &525557020
 GameObject:
   m_ObjectHideFlags: 0
@@ -1857,6 +1857,7 @@ GameObject:
   - component: {fileID: 964711244}
   - component: {fileID: 964711243}
   - component: {fileID: 964711242}
+  - component: {fileID: 964711245}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -1940,6 +1941,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
+      - m_Target: {fileID: 964711245}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: PlayInstance
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &964711243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1978,6 +1991,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 964711240}
   m_CullTransparentMesh: 1
+--- !u!114 &964711245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964711240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 213891144
+      Data2: 1278282503
+      Data3: 186318776
+      Data4: -19924915
+    Path: event:/UI/Menu Buttons
+  Event: 
+  PlayEvent: 11
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1006099689
 GameObject:
   m_ObjectHideFlags: 0
