@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 09dbb24821917dc419707364a41e40fb
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Ptarmigan
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: c74d7c93256cb744f83508eb73a4c982, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
