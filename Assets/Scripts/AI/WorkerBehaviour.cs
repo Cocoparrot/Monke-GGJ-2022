@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
+using FMODUnity;
 
 public class WorkerBehaviour : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class WorkerBehaviour : MonoBehaviour
     private Transform[] targets;
     public Transform monkeyTarget;
     private GameObject lastSeen;
+    public EventReference detectedvox;
 
     private AI_Vision fov;
 
@@ -51,6 +53,7 @@ public class WorkerBehaviour : MonoBehaviour
                 }
                 if (fov.visibleTargets[0] != null && movementSCR.form.speciesName == "Monkey")
                 {
+                    RuntimeManager.PlayOneShot(detectedvox);
                     currentState = WorkerState.Chase;
                 }
                 break;

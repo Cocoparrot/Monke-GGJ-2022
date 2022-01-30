@@ -186,6 +186,20 @@ MonoBehaviour:
   jumpHeight: 1
   cam: {fileID: 0}
   emitter: {fileID: 8254117838028135969}
+  morph:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  jump:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   human: {fileID: 11400000, guid: a4dfff8df91f9674597348fc1615936f, type: 2}
   monkey: {fileID: 11400000, guid: 62a24a225082fed4890ab10e7a9f605c, type: 2}
   form: {fileID: 11400000, guid: 62a24a225082fed4890ab10e7a9f605c, type: 2}
@@ -378,6 +392,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitbox: {fileID: 3530443662449479529}
   swingTime: 0
+  meleevox:
+    Guid:
+      Data1: -1323485849
+      Data2: 1337090166
+      Data3: -110736966
+      Data4: 1014726490
+    Path: event:/Monkey/Vox/Angry
 --- !u!65 &3530443662449479529
 BoxCollider:
   m_ObjectHideFlags: 0

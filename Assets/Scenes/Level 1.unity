@@ -604,7 +604,6 @@ GameObject:
   m_Component:
   - component: {fileID: 210029704}
   - component: {fileID: 210029703}
-  - component: {fileID: 210029702}
   - component: {fileID: 210029705}
   - component: {fileID: 210029706}
   - component: {fileID: 210029707}
@@ -615,14 +614,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &210029702
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 210029701}
-  m_Enabled: 1
 --- !u!20 &210029703
 Camera:
   m_ObjectHideFlags: 0
@@ -5416,8 +5407,28 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 210029707}
     - target: {fileID: 5324807119351219345, guid: 62119b0912a35704bbf2948e8e833338, type: 3}
+      propertyPath: jump.Path
+      value: event:/Monkey/Vox/Positive
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324807119351219345, guid: 62119b0912a35704bbf2948e8e833338, type: 3}
       propertyPath: morph.Path
       value: event:/Monkey/Morph
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324807119351219345, guid: 62119b0912a35704bbf2948e8e833338, type: 3}
+      propertyPath: jump.Guid.Data1
+      value: 1917094369
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324807119351219345, guid: 62119b0912a35704bbf2948e8e833338, type: 3}
+      propertyPath: jump.Guid.Data2
+      value: 1086332289
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324807119351219345, guid: 62119b0912a35704bbf2948e8e833338, type: 3}
+      propertyPath: jump.Guid.Data3
+      value: 2141577884
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324807119351219345, guid: 62119b0912a35704bbf2948e8e833338, type: 3}
+      propertyPath: jump.Guid.Data4
+      value: 1784774705
       objectReference: {fileID: 0}
     - target: {fileID: 5324807119351219345, guid: 62119b0912a35704bbf2948e8e833338, type: 3}
       propertyPath: morph.Guid.Data1
@@ -5616,8 +5627,32 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8240898528845457244, guid: 07f6da2944a812b47ae6963143484a17, type: 3}
+      propertyPath: EventReference.Path
+      value: event:/Environment/Assets/Coffee
+      objectReference: {fileID: 0}
+    - target: {fileID: 8240898528845457244, guid: 07f6da2944a812b47ae6963143484a17, type: 3}
+      propertyPath: OverrideAttenuation
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8240898528845457244, guid: 07f6da2944a812b47ae6963143484a17, type: 3}
       propertyPath: OverrideMaxDistance
-      value: 11.3
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8240898528845457244, guid: 07f6da2944a812b47ae6963143484a17, type: 3}
+      propertyPath: EventReference.Guid.Data1
+      value: -1955888886
+      objectReference: {fileID: 0}
+    - target: {fileID: 8240898528845457244, guid: 07f6da2944a812b47ae6963143484a17, type: 3}
+      propertyPath: EventReference.Guid.Data2
+      value: 1130423963
+      objectReference: {fileID: 0}
+    - target: {fileID: 8240898528845457244, guid: 07f6da2944a812b47ae6963143484a17, type: 3}
+      propertyPath: EventReference.Guid.Data3
+      value: -2048421240
+      objectReference: {fileID: 0}
+    - target: {fileID: 8240898528845457244, guid: 07f6da2944a812b47ae6963143484a17, type: 3}
+      propertyPath: EventReference.Guid.Data4
+      value: -1353800848
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07f6da2944a812b47ae6963143484a17, type: 3}

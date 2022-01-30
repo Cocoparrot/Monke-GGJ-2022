@@ -245,6 +245,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monkeyTarget: {fileID: 547979181528073972}
+  detectedvox:
+    Guid:
+      Data1: 27710985
+      Data2: 1318249369
+      Data3: 6538939
+      Data4: 1846143397
+    Path: event:/Monkey/Vox/Surprise
   currentState: 0
 --- !u!114 &5661874225090450488
 MonoBehaviour:

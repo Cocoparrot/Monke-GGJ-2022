@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class Melee : MonoBehaviour
 {
     public Collider hitbox;
     public float swingTime;
+    public EventReference meleevox;
 
     private bool activeMelee;
     private bool activeInteract;
@@ -20,7 +22,9 @@ public class Melee : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
+            RuntimeManager.PlayOneShot(meleevox);
             StartCoroutine(SwingTime(swingTime));
+
         }
 
         if (Input.GetButtonDown("Interact"))
