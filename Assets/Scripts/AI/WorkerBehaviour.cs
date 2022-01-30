@@ -62,7 +62,7 @@ public class WorkerBehaviour : MonoBehaviour
                 }
                 patrol.targets = new Transform[1];
                 patrol.targets[0] = monkeyTarget;
-                if (fov.visibleTargets.Count == 1)
+                if (fov.visibleTargets.Count >= 1)
                 {
                     monkeyTarget.position = fov.visibleTargets[0].position;
                 }
