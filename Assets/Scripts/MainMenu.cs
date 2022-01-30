@@ -16,7 +16,7 @@ public class MainMenu : MonoBehaviour
 
 	public void LoadMainMenu()
 	{
-		SceneManager.LoadScene(sceneBuildIndex: 0);
+		SceneManager.LoadScene("ComicBook");
 	}
 	
 	
