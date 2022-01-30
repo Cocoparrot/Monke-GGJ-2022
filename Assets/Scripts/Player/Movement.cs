@@ -30,9 +30,10 @@ public class Movement : MonoBehaviour
         playerSpeed = form.speed;
         jumpHeight = form.jumpSpeed;
         melee.swingTime = form.swingTime;
+        cam = Camera.main.transform;
         if (form.speciesName == "Monkey")
         {
-            emitter.SetParameter("Monkey Mode", 51);
+            emitter.SetParameter("Monkey Mode", 0);
         }
     }
 
@@ -59,7 +60,7 @@ public class Movement : MonoBehaviour
 
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized;
 
-        if (move.magnitude >= 0.1f && playerVelocity.y >= 0f)
+        if (move.magnitude >= 0.1f && playerVelocity.y <= 0f)
         {
             float targetAngle = Mathf.Atan2(move.x, move.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
 
@@ -86,14 +87,14 @@ public class Movement : MonoBehaviour
                 form = human;
                 monkeyGFX.SetActive(false);
                 humanGFX.SetActive(true);
-                emitter.SetParameter("Monkey Mode", 0);
+                emitter.SetParameter("Monkey Mode", 51);
             }
             else
             {
                 form = monkey;
                 monkeyGFX.SetActive(true);
                 humanGFX.SetActive(false);
-                emitter.SetParameter("Monkey Mode", 51);
+                emitter.SetParameter("Monkey Mode", 0);
             }
 
             playerSpeed = form.speed;

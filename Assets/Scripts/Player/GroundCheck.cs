@@ -4,31 +4,28 @@ using UnityEngine;
 
 public class GroundCheck : MonoBehaviour
 {
-    private Collider playerCollider;
+    public Collider playerCollider;
     public Movement movementSCR;
-    private float distToGround;
+    private bool grounded;
 
     private void Start()
     {
-        playerCollider = this.gameObject.GetComponent<Collider>();
         movementSCR = this.gameObject.GetComponent<Movement>();
-        distToGround = playerCollider.bounds.extents.y;
-    }
-
-    public bool IsGrounded()
-    {
-        return Physics.Raycast(transform.position, -Vector3.up, distToGround + 0.1f);
     }
 
     private void Update()
     {
-        if (IsGrounded())
-        {
-            movementSCR.groundedPlayer = true;
-        }
-        else
-        {
-            movementSCR.groundedPlayer = false;
-        }
+        movementSCR.groundedPlayer = grounded;
+
+    }
+
+    private void OnCollisionStay(Collision other)
+    {
+        grounded = true;
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        grounded = false;
     }
 }
