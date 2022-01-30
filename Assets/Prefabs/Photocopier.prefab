@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 686952880989939131}
   - component: {fileID: 363829296187495323}
   - component: {fileID: 3940091436132628197}
+  - component: {fileID: 2412512285153325262}
   m_Layer: 0
   m_Name: Photocopier
   m_TagString: Untagged
@@ -64,6 +65,36 @@ MonoBehaviour:
   emotion: 
   emotionCount: 0
   successCount: 0
+--- !u!114 &2412512285153325262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199104710566117121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1317863837
+      Data2: 1141633908
+      Data3: 1393601690
+      Data4: 1545067375
+    Path: event:/Environment/Assets/Electrics 1
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 5.8
 --- !u!1 &400353005874540596
 GameObject:
   m_ObjectHideFlags: 0
