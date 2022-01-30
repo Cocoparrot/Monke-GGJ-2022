@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 28e69172421f8b942a78c58564cfa648
+guid: 933da8a4c61a62243ba0d0ba89d4652a
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
@@ -7,11 +7,14 @@ ModelImporter:
       74: -576084311027362861
     second: Full
   - first:
-      74: 3550663625967076873
-    second: ANM_MonkeyWalk
+      74: -3100369314251171874
+    second: Idle
   - first:
-      74: 408700781248790471
-    second: 10
+      74: 2667949614841947897
+    second: Walk
+  - first:
+      74: -3960979492196026050
+    second: WalkAngry
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -32,7 +35,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -44,8 +47,8 @@ ModelImporter:
       name: Full
       takeName: Full
       internalID: 0
-      firstFrame: 10
-      lastFrame: 80
+      firstFrame: 0
+      lastFrame: 82
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -70,11 +73,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: ANM_MonkeyWalk
+      name: Idle
       takeName: Full
       internalID: 0
-      firstFrame: 25
-      lastFrame: 80
+      firstFrame: 0
+      lastFrame: 0
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -97,13 +100,13 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 10
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: 10
+      name: Walk
       takeName: Full
       internalID: 0
       firstFrame: 10
-      lastFrame: 10
+      lastFrame: 42
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -126,7 +129,36 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 10
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: WalkAngry
+      takeName: Full
+      internalID: 0
+      firstFrame: 50
+      lastFrame: 82
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 0
   meshes:
     lODScreenPercentages: []
@@ -190,7 +222,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 
