@@ -10,6 +10,8 @@ public class Melee : MonoBehaviour
     private bool activeMelee;
     private bool activeInteract;
 
+    public Animator animator;
+
     void Start()
     {
         activeMelee = false;
@@ -20,6 +22,7 @@ public class Melee : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
+            animator.SetTrigger("MAttack");
             StartCoroutine(SwingTime(swingTime));
         }
 

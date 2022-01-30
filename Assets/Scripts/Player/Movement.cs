@@ -25,6 +25,9 @@ public class Movement : MonoBehaviour
 
     public Melee melee;
 
+    public Animator animatorM;
+    public Animator animatorH;
+
     private void Start()
     {
         playerSpeed = form.speed;
@@ -56,21 +59,31 @@ public class Movement : MonoBehaviour
         if (groundedPlayer && playerVelocity.y < 0)
         {
             playerVelocity.y = 0f;
+            animatorM.SetBool("IsFalling", false);
         }
 
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized;
 
         if (move.magnitude >= 0.1f && playerVelocity.y <= 0f)
         {
+            animatorM.SetBool("IsWalking", true);
+            animatorH.SetBool("IsMoving", true);
             float targetAngle = Mathf.Atan2(move.x, move.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
 
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             controller.Move(moveDir.normalized * Time.deltaTime * playerSpeed);
         }
+        else
+        {
+            animatorM.SetBool("IsWalking", false);
+            animatorH.SetBool("IsMoving", false);
+        }
         // Changes the height position of the player..
         if (Input.GetButtonDown("Jump") && groundedPlayer)
         {
             playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
+            animatorM.SetBool("IsFalling", true);
+            animatorM.SetTrigger("MJump");
         }
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);

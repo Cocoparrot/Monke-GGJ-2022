@@ -15,6 +15,8 @@ public class WorkerBehaviour : MonoBehaviour
 
     private Movement movementSCR;
 
+    public Animator animator;
+
     public enum WorkerState
     {
         Unaware, Chase, Distracted
@@ -44,6 +46,10 @@ public class WorkerBehaviour : MonoBehaviour
         {
             default:
             case WorkerState.Unaware:
+
+                animator.SetBool("IsMoving", true);
+                animator.SetBool("isAngry", false);
+
                 patrol.targets = new Transform[targets.Length];
                 for (int i = 0; i < patrol.targets.Length; i++)
                 {
@@ -56,6 +62,10 @@ public class WorkerBehaviour : MonoBehaviour
                 break;
 
             case WorkerState.Chase:
+
+                animator.SetBool("isAngry", true);
+                animator.SetBool("IsMoving", false);
+
                 for (int i = 0; i < patrol.targets.Length; i++)
                 {
                     patrol.targets[i] = null;
