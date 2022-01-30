@@ -325,11 +325,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: -355017780
-      Data2: 1227522448
-      Data3: -757628481
-      Data4: 1526894991
-    Path: event:/Environment/Broken/Electrics Broken
+      Data1: -1955888886
+      Data2: 1130423963
+      Data3: -2048421240
+      Data4: -1353800848
+    Path: event:/Environment/Assets/Coffee
   Event: 
   PlayEvent: 1
   StopEvent: 2
@@ -337,9 +337,9 @@ MonoBehaviour:
   TriggerOnce: 0
   Preload: 0
   Params: []
-  OverrideAttenuation: 1
+  OverrideAttenuation: 0
   OverrideMinDistance: 1
-  OverrideMaxDistance: 13.68
+  OverrideMaxDistance: 20
 --- !u!1 &7263530414364121395
 GameObject:
   m_ObjectHideFlags: 0
