@@ -156,7 +156,7 @@ MonoBehaviour:
   repathRateCompatibility: NaN
   canSearchCompability: 0
   orientation: 0
-  enableRotation: 0
+  enableRotation: 1
   autoRepath:
     mode: 2
     interval: 0.5
@@ -239,6 +239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monkeyTarget: {fileID: 0}
+  currentState: 0
 --- !u!114 &4116314213330923814
 MonoBehaviour:
   m_ObjectHideFlags: 0

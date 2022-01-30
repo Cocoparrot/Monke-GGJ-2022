@@ -2340,9 +2340,10 @@ GameObject:
   - component: {fileID: 2045726341}
   - component: {fileID: 2045726340}
   - component: {fileID: 2045726339}
+  - component: {fileID: 2045726343}
   m_Layer: 8
   m_Name: MonkeyDummy
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2424,6 +2425,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2045726343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045726338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0a0f1ea1dc6d5846a5e043dde2cb763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 0}
+  groundedPlayer: 0
+  playerSpeed: 2
+  jumpHeight: 1
+  cam: {fileID: 0}
+  human: {fileID: 0}
+  monkey: {fileID: 0}
+  form: {fileID: 11400000, guid: 62a24a225082fed4890ab10e7a9f605c, type: 2}
+  humanGFX: {fileID: 0}
+  monkeyGFX: {fileID: 0}
+  melee: {fileID: 0}
 --- !u!1001 &5062780694393194362
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2612,5 +2636,13 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 391505622}
+    - target: {fileID: 8586193770003831087, guid: 0d11184028a0e434ba9d913e71f9c7c5, type: 3}
+      propertyPath: height
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8586193770003831087, guid: 0d11184028a0e434ba9d913e71f9c7c5, type: 3}
+      propertyPath: radius
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d11184028a0e434ba9d913e71f9c7c5, type: 3}

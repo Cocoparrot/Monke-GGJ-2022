@@ -12,7 +12,8 @@ public class WorkerBehaviour : MonoBehaviour
     private GameObject lastSeen;
 
     private AI_Vision fov;
-    
+
+    private Movement movementSCR;
 
     public enum WorkerState
     {
@@ -24,6 +25,8 @@ public class WorkerBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        movementSCR = GameObject.FindGameObjectWithTag("Player").GetComponent<Movement>();
+
         currentState = WorkerState.Unaware;
         patrol = this.gameObject.GetComponent<Patrol>();
         fov = this.gameObject.GetComponent<AI_Vision>();
@@ -41,11 +44,12 @@ public class WorkerBehaviour : MonoBehaviour
         {
             default:
             case WorkerState.Unaware:
+                patrol.targets = new Transform[targets.Length];
                 for (int i = 0; i < patrol.targets.Length; i++)
                 {
                     patrol.targets[i] = targets[i];
                 }
-                if (fov.visibleTargets[0] != null)
+                if (fov.visibleTargets[0] != null && movementSCR.form.speciesName == "Monkey")
                 {
                     currentState = WorkerState.Chase;
                 }
@@ -56,7 +60,7 @@ public class WorkerBehaviour : MonoBehaviour
                 {
                     patrol.targets[i] = null;
                 }
-
+                patrol.targets = new Transform[1];
                 patrol.targets[0] = monkeyTarget;
                 if (fov.visibleTargets.Count == 1)
                 {
@@ -65,6 +69,7 @@ public class WorkerBehaviour : MonoBehaviour
                 float dist = Vector3.Distance(monkeyTarget.position, this.transform.position);
                 if (fov.visibleTargets.Count == 0)
                 {
+                    patrol.targets = new Transform[1];
                     currentState = WorkerState.Unaware;
                 }
                 break;
