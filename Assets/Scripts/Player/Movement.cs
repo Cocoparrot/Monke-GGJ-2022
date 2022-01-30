@@ -13,6 +13,7 @@ public class Movement : MonoBehaviour
     private float gravityValue = -9.81f;
     public Transform cam;
     public StudioEventEmitter emitter;
+    public EventReference morph;
 
     public Species human;
     public Species monkey;
@@ -79,7 +80,7 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetButtonDown("Swap"))
         {
-            
+            RuntimeManager.PlayOneShot(morph);
             Debug.Log("Swap");
             if (form.speciesName == "Monkey")
             {
