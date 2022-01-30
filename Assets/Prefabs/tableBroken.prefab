@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5996862932723666661}
   - component: {fileID: 2381605901578130036}
   - component: {fileID: 8413601456178482036}
+  - component: {fileID: 3274242185096870747}
   m_Layer: 0
   m_Name: TableRLeg
   m_TagString: Untagged
@@ -92,7 +93,7 @@ MeshCollider:
   m_GameObject: {fileID: 1074879282220311690}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
@@ -105,7 +106,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1074879282220311690}
   serializedVersion: 2
-  m_Mass: 0.5
+  m_Mass: 10
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -113,6 +114,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &3274242185096870747
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074879282220311690}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.002110965, y: 0.0013272024, z: 0.00950814}
+  m_Center: {x: 0.0073852837, y: -0.012876222, z: -0.009157459}
 --- !u!1 &4606606548313864548
 GameObject:
   m_ObjectHideFlags: 0
@@ -126,6 +140,7 @@ GameObject:
   - component: {fileID: 4459569040035047775}
   - component: {fileID: 8762616078394976452}
   - component: {fileID: 1817477435393713885}
+  - component: {fileID: 9169654332697129676}
   m_Layer: 0
   m_Name: TableL
   m_TagString: Untagged
@@ -205,7 +220,7 @@ MeshCollider:
   m_GameObject: {fileID: 4606606548313864548}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
@@ -218,7 +233,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4606606548313864548}
   serializedVersion: 2
-  m_Mass: 0.5
+  m_Mass: 10
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -226,6 +241,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &9169654332697129676
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4606606548313864548}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.024822254, z: 0.014886786}
+  m_Center: {x: -4.656613e-10, y: 0.0131558655, z: -0.006468137}
 --- !u!1 &5684193815579011673
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,6 +267,7 @@ GameObject:
   - component: {fileID: 5702560183613109310}
   - component: {fileID: 252936163552123237}
   - component: {fileID: 6883701638477238216}
+  - component: {fileID: 7501568165251249202}
   m_Layer: 0
   m_Name: TableR
   m_TagString: Untagged
@@ -318,7 +347,7 @@ MeshCollider:
   m_GameObject: {fileID: 5684193815579011673}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
@@ -331,14 +360,27 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5684193815579011673}
   serializedVersion: 2
-  m_Mass: 0.5
-  m_Drag: 0
+  m_Mass: 10
+  m_Drag: 10
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &7501568165251249202
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5684193815579011673}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.023509663, z: 0.014886786}
+  m_Center: {x: 0, y: -0.0040539238, z: -0.006468137}
 --- !u!1 &6735105243202632426
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,6 +428,7 @@ GameObject:
   - component: {fileID: 3546708927175969485}
   - component: {fileID: 7922386055754394771}
   - component: {fileID: 2444358930050123814}
+  - component: {fileID: 8166410295231960902}
   m_Layer: 0
   m_Name: TableLLeg
   m_TagString: Untagged
@@ -465,7 +508,7 @@ MeshCollider:
   m_GameObject: {fileID: 7102372035725749922}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
@@ -478,7 +521,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7102372035725749922}
   serializedVersion: 2
-  m_Mass: 0.5
+  m_Mass: 10
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -486,3 +529,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &8166410295231960902
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7102372035725749922}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.002110965, y: 0.0013272052, z: 0.00955831}
+  m_Center: {x: -0.0073852837, y: 0.022634462, z: -0.009132374}

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
 
 public class Destructible : MonoBehaviour
 {
@@ -18,5 +19,7 @@ public class Destructible : MonoBehaviour
         scoreSCR.addScore(score, true);
         Instantiate(brokenModel, transform.position, Quaternion.identity);
         Destroy(this.gameObject);
+        AstarPath.active.Scan();
+
     }
 }
