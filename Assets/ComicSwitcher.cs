@@ -19,7 +19,8 @@ public class ComicSwitcher : MonoBehaviour
     void Start()
     {
         panelCount = 1;
-        animator = GetComponent<Animator>();   
+        animator = GetComponent<Animator>();
+        RuntimeManager.PlayOneShot(comicLines[0]);
     }
 
     private void Update()
@@ -32,13 +33,13 @@ public class ComicSwitcher : MonoBehaviour
     // Update is called once per frame
     void PanelSwitch()
     {
-        if (panelCount <= 8)
+        if (panelCount <= 7)
         {
             animator.Play(cam[panelCount]);
             RuntimeManager.PlayOneShot(comicLines[panelCount]);
         }
         panelCount += 1;
-        if (panelCount >= 10)
+        if (panelCount >= 9)
         {
             SceneManager.LoadScene("Level 1");
         }
