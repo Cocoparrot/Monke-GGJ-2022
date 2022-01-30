@@ -19,13 +19,19 @@ public class WorkerBehaviour : MonoBehaviour
         Unaware, Chase, Distracted
     }
 
-    private WorkerState currentState;
+    public WorkerState currentState;
 
     // Start is called before the first frame update
     void Start()
     {
-        fov = gameObject.GetComponent<AI_Vision>();
-        targets = patrol.targets;
+        currentState = WorkerState.Unaware;
+        patrol = this.gameObject.GetComponent<Patrol>();
+        fov = this.gameObject.GetComponent<AI_Vision>();
+        targets = new Transform[patrol.targets.Length];
+        for (int i = 0; i < patrol.targets.Length; i++)
+        {
+            targets[i] = patrol.targets[i];
+        }
     }
 
     // Update is called once per frame
@@ -35,8 +41,16 @@ public class WorkerBehaviour : MonoBehaviour
         {
             default:
             case WorkerState.Unaware:
-                patrol.targets = targets;
+                for (int i = 0; i < patrol.targets.Length; i++)
+                {
+                    patrol.targets[i] = targets[i];
+                }
+                if (fov.visibleTargets[0] != null)
+                {
+                    currentState = WorkerState.Chase;
+                }
                 break;
+
             case WorkerState.Chase:
                 for (int i = 0; i < patrol.targets.Length; i++)
                 {
@@ -44,11 +58,17 @@ public class WorkerBehaviour : MonoBehaviour
                 }
 
                 patrol.targets[0] = monkeyTarget;
-                if (fov.visibleTargets[0] != null)
+                if (fov.visibleTargets.Count == 1)
                 {
                     monkeyTarget.position = fov.visibleTargets[0].position;
                 }
+                float dist = Vector3.Distance(monkeyTarget.position, this.transform.position);
+                if (fov.visibleTargets.Count == 0)
+                {
+                    currentState = WorkerState.Unaware;
+                }
                 break;
+
                 //Distracted makes it so the worker waits for 5 seconds on the waypoint of the distraction?
             case WorkerState.Distracted:
                 //Came across a distraction and now he will just wait
